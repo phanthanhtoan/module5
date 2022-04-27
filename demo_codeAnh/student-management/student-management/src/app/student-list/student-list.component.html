@@ -1,0 +1,32 @@
+<h1 class="text-center text-primary">Student List</h1>
+<div class="container-fluid">
+<table class="table table-striped table-bordered" >
+  <tr>
+    <th class="col-1">STT</th>
+    <th class="col-1">Id</th>
+    <th class="col-2">Name</th>
+    <th class="col-1">Age</th>
+    <th class="col-1">Mark</th>
+    <th class="col-1">OutCome</th>
+    <th class="col-2">Tools</th>
+  </tr>
+  <tbody>
+  <tr *ngFor="let student of students; let stt =index">
+    <td>{{stt+1| number}}</td>
+    <td>{{student.id}}</td>
+    <td>{{student.name | titlecase}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.mark}}</td>
+    <td class="text-success" *ngIf="student.mark >=5">Pass</td>
+    <td class="text-danger" *ngIf="student.mark <5">Fail</td>
+    <td>
+      <a class="btn btn-primary m-2">Chi tiết</a>
+      <a class="btn btn-warning m-2">Sửa</a>
+      <a class="btn btn-danger m-2">Xoá</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+
