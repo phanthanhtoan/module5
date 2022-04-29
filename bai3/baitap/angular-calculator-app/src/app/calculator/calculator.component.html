@@ -1,10 +1,12 @@
 <form>
-  <input type="number" id="o1">
-  <input type="number" id="o2"><br/><br>
-  <button type="button" id="add"  onclick="add()">Addition(+)</button>
-  <button type="button" id="subn" onclick="sub()">Subtraction(-)</button>
-  <button type="button" id="mul" onclick="multi()">Multiplication(x)</button>
-  <button type="button" id="div" onclick="divi()">Division(/)</button><br/>
+  <input type="number" id="o1" [(ngModel)]="calculator.numberA">
+  <input type="number" id="o2" [(ngModel)]="calculator.numberB"><br/><br>
+  <button type="button" id="add"  (click)="add()">Addition(+)</button>
+  <button type="button" id="subn" (click)="sub()">Subtraction(-)</button>
+  <button type="button" id="mul" (click)="mul()">Multiplication(x)</button>
+  <button type="button" id="div"(click)="div()">Division(/)</button><br/>
 
-  <p id="result" style="color: blue">Result:</p>
+
+  <p  style="color: blue">Result:{{result}}</p>
+  <p style="color: blue">Error:{{error}}</p>
 </form>
