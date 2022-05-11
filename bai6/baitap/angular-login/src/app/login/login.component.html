@@ -1,0 +1,22 @@
+<p>login works!</p>
+<div class="container">
+  <form class="col-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="mb-3">
+      <label class="form-label" for="account">Account: <i class="text-danger">(*)</i></label>
+      <input type="email" class="form-control" id="account" name="account" formControlName="account">
+
+      <div *ngIf="!loginForm.get('account')?.valid && (loginForm.get('account')?.dirty
+    ||loginForm.get('account')?.touched)">
+        <p class="text-danger">Account is not valid</p>
+      </div>
+    </div>
+
+    <div class="mb-3" formGroupName="pwGroup">
+      <label class="form-label" for="password">Password: <i class="text-danger">(*)</i> </label>
+      <input type="password" class="form-control" id="password" name="password" formControlName="password">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+  </form>
+</div>
