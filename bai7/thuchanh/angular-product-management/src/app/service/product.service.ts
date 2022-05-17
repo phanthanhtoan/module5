@@ -5,7 +5,7 @@ import {Product} from "../model/product";
   providedIn: 'root'
 })
 export class ProductService {
-product: Product[] = [{
+products: Product[] = [{
   id: 1,
   name: 'IPhone 12',
   price: 2400000,
@@ -34,10 +34,10 @@ product: Product[] = [{
   constructor() { }
 
   getAll(){
-    return this.product;
+    return this.products;
   }
 
   saveProduct({product}: { product: any }) {
-    this.product.push(product);
+    this.products.push(product);
   }
 }

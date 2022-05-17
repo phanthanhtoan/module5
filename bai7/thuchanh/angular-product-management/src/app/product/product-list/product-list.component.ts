@@ -12,7 +12,11 @@ product: Product[] =[];
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.productService.getAll();
+   this.getAll();
   }
+  getAll() {
+    this.product = this.productService.getAll();
+  }
+
 
 }
