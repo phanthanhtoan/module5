@@ -1,9 +1,28 @@
 {
-  "customer": [
+  "customers": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": "KH-01",
+      "name": "Phan Thanh Toann",
+      "dateOfBirthday": "2000-12-21",
+      "gender": "Male",
+      "nationalId": "206194506",
+      "phone": "0399885400",
+      "email": "toan@gmail.com",
+      "customerType": "Diamond",
+      "address": "Da Nang",
+      "serviceId": 1
+    },
+    {
+      "id": "KH-02",
+      "name": "Nguyen Trung Hau",
+      "dateOfBirthday": "2000-03-16",
+      "gender": "Female",
+      "nationalId": "206194506",
+      "phone": "0399885400",
+      "email": "toan@gmail.com",
+      "customerType": "Platinium",
+      "address": "Da Nang",
+      "serviceId": 1
     }
   ],
   "comments": [

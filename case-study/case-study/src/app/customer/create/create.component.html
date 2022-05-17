@@ -1,1 +1,60 @@
-<p>create works!</p>
+<div class="container-fluid">
+  <div class="row bg-white p-lg-5">
+    <a routerLink="/customer" style="color: black" >
+      <button type="button" class="btn btn-success">Customer list</button>
+    </a>
+    <h3 class="text-center">Thêm Khách hàng: </h3>
+      <form>
+        <div>
+
+          <div class="mb-2">
+            <label>Tên khách hàng: </label>
+            <input type="text" class="form-control" required />
+          </div>
+
+          <div class="mb-2">
+            <label>Loại khách hàng: </label>
+            <select formControlName="customerType" class="form-control">
+              <option [value]="null" disabled>--Choose--</option>
+              <option value="Diamond">Diamond</option>
+              <option value="Platinium">Platinium</option>
+              <option value="Gold">Gold</option>
+              <option value="Silver">Silver</option>
+              <option value="Member">Member</option>
+            </select>
+          </div>
+
+          <div class="mb-2">
+            <label>Ngày sinh: </label>
+            <input type="date" class="form-control" />
+          </div>
+
+          <div class="mb-2">
+            <label>Giới tính: </label>
+            <select class="form-control form-select">
+              <option value="1">Nam</option>
+              <option value="0">Nữ</option>
+            </select>
+          </div>
+
+          <div class="mb-2">
+            <label>CCCD: </label>
+            <input type="text" class="form-control" >
+          </div>
+          <div class="mb-2">
+            <label>SĐT: </label>
+            <input type="text" class="form-control"  >
+          </div>
+          <div class="mb-2">
+            <label>Email: </label>
+            <input type="text" class="form-control" >
+          </div>
+          <div class="mb-2">
+            <label>Địa chỉ: </label>
+            <input type="text" class="form-control" >
+          </div>
+        </div>
+      </form>
+    </div>
+
+</div>

@@ -5,24 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { CustomerComponent } from './customer/customer.component';
-import { EmployeeComponent } from './employee/employee.component';
 import { ListComponent } from './customer/list/list.component';
-import { CreateComponent } from './customer/create/create.component';
+import {CreateComponent} from "./customer/create/create.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { EditComponent } from './customer/edit/edit.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    CustomerComponent,
-    EmployeeComponent,
+    CreateComponent,
     ListComponent,
-    CreateComponent
+    EditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,74 @@
+<div class="row align-items-center mt-3">
+  <div class="col-2"></div>
+  <div class="col-8 card border-warning">
+    <form [formGroup]="editForm" (submit)="onSubmit()" >
+
+      <div class="form-group mt-2">
+        <label for="exampleFormControlInput1">Mã KH</label>
+        <input formControlName="id" readonly type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Tên KH</label>
+        <input formControlName="name" type="text" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ngày sinh</label>
+        <input formControlName="dateOfBirthday" type="date" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Giới tính</label>
+        <select formControlName="gender" class="form-control" id="exampleFormControlSelect1">
+                    <option [ngValue]="'Male'">Male</option>
+                    <option [ngValue]="'Female'">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Căn cước công dân</label>
+        <input formControlName="nationalId" type="text" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">SĐT</label>
+        <input formControlName="phone" type="text" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email</label>
+        <input formControlName="email" type="text" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Loại Khách Hàng</label>
+        <select formControlName="customerType" class="form-control">
+          <option [value]="null" disabled>--Choose--</option>
+          <option value="Diamond">Diamond</option>
+          <option value="Platinium">Platinium</option>
+          <option value="Gold">Gold</option>
+          <option value="Silver">Silver</option>
+          <option value="Member">Member</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Địa chỉ</label>
+        <input formControlName="address" type="text" class="form-control">
+      </div>
+
+      <div class="text-center m-3">
+        <button class="btn btn-danger mr-5">
+          <a id="huy" routerLink="/customer">
+            <i class="fa fa-paper-plane"></i>Quay lại</a>
+        </button>
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-paper-plane"></i>
+          <span class="ml-1">Cập Nhật</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

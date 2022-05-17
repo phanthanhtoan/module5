@@ -20,10 +20,10 @@ export class ComponentService {
     return this.httpClient.get<SinhVienModel>(this.API_URL + '/' + id);
   }
 
-  updateStudent(nhanVienModel: SinhVienModel): Observable<void> {
-    console.log(nhanVienModel);
-    return this.httpClient.patch<void>(this.API_URL + '/' + nhanVienModel.id, nhanVienModel);
-  }
+    updateStudent(nhanVienModel: SinhVienModel): Observable<void> {
+      console.log(nhanVienModel);
+      return this.httpClient.patch<void>(this.API_URL + '/' + nhanVienModel.id, nhanVienModel);
+    }
 
   deleteStudent(id: string): Observable<void> {
     return this.httpClient.delete<void>(this.API_URL + '/' + id);

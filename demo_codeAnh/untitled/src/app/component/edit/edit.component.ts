@@ -19,7 +19,8 @@ export class EditComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       const id = Number(paramMap.get('id'));
-      this.service.findById(id).subscribe(next => {
+      this.service.findById(id).subscribe(
+        next => {
         this.sinhVien = next;
         this.editForm.patchValue({
           id: this.sinhVien.id,
