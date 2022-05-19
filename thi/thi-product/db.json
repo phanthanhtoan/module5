@@ -1,0 +1,65 @@
+{
+  "benhAn": [
+    {
+      "id": "BA-002",
+      "idBenhNhan": "BN-002",
+      "tenBenhNhan": "huy",
+      "ngayNhapVien": "2022-12-06",
+      "ngayRaVien": "2022-12-08",
+      "lyDo": "Tai nan",
+      "phuongPhap": "Bang chan",
+      "bacSi": "toan"
+    },
+    {
+      "id": "BA-003",
+      "idBenhNhan": "BN-003",
+      "tenBenhNhan": "hau",
+      "ngayNhapVien": "2022-12-06",
+      "ngayRaVien": "2022-12-08",
+      "lyDo": "Tai nan",
+      "phuongPhap": "Bang chan",
+      "bacSi": "huy"
+    },
+    {
+      "id": "BA-004",
+      "idBenhNhan": "BN-004",
+      "tenBenhNhan": "tu",
+      "ngayNhapVien": "2022-12-06",
+      "ngayRaVien": "2022-12-08",
+      "lyDo": "Tai nan",
+      "phuongPhap": "Bang chan",
+      "bacSi": "hoang"
+    },
+    {
+      "id": "BA-005",
+      "idBenhNhan": "BN-005",
+      "tenBenhNhan": "hoang",
+      "ngayNhapVien": "2022-12-06",
+      "ngayRaVien": "2022-12-08",
+      "lyDo": "Tai nan",
+      "phuongPhap": "Bang chan",
+      "bacSi": "hau"
+    },
+    {
+      "id": "BA-123",
+      "idBenhNhan": "BN-123",
+      "tenBenhNhan": "thao",
+      "ngayNhapVien": "2022-05-03",
+      "ngayRaVien": "2022-05-19",
+      "lyDo": "ung thư",
+      "phuongPhap": "vật lí trị liệu",
+      "customerType": "",
+      "bacSi": "toàn"
+    },
+    {
+      "id": "BA-006",
+      "idBenhNhan": "BN-006",
+      "tenBenhNhan": "nhung",
+      "ngayNhapVien": "2022-05-12",
+      "ngayRaVien": "2022-05-18",
+      "lyDo": "tai nan",
+      "phuongPhap": "an",
+      "bacSi": "toan"
+    }
+  ]
+}

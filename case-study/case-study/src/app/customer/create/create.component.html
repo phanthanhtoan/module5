@@ -4,12 +4,21 @@
       <button type="button" class="btn btn-success">Customer list</button>
     </a>
     <h3 class="text-center">Thêm Khách hàng: </h3>
-      <form>
+      <form [formGroup]="createCustomerForm" (ngSubmit)="createCustomer()">
         <div>
+          <div class="mb-2">
+            <label>Mã khách hàng: <i class="text-danger">*</i> </label>
+            <input type="text" class="form-control" formControlName="id" />
+            <p class="error text-danger"
+               *ngIf="(createCustomerForm.get('id').hasError('pattern') && createCustomerForm.get('id').dirty)
+                || createCustomerForm.get('id').touched ">
+              Không được để trống, Mã KH bắt đầu bằng KH-***
+            </p>
+          </div>
 
           <div class="mb-2">
             <label>Tên khách hàng: </label>
-            <input type="text" class="form-control" required />
+            <input type="text" class="form-control" formControlName="name" />
           </div>
 
           <div class="mb-2">
@@ -26,32 +35,42 @@
 
           <div class="mb-2">
             <label>Ngày sinh: </label>
-            <input type="date" class="form-control" />
+            <input type="date" class="form-control" formControlName="dateOfBirthday" />
           </div>
 
           <div class="mb-2">
             <label>Giới tính: </label>
-            <select class="form-control form-select">
-              <option value="1">Nam</option>
-              <option value="0">Nữ</option>
+            <select class="form-control form-select" formControlName="gender">
+              <option value="Nam">Nam</option>
+              <option value="Nữ">Nữ</option>
             </select>
           </div>
 
           <div class="mb-2">
             <label>CCCD: </label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" formControlName="nationalId" />
+            <p class="error text-danger" *ngIf="(createCustomerForm.get('id').hasError('pattern') && createCustomerForm.get('nationalId').dirty)
+          || (createCustomerForm.get('nationalId').hasError('required') && createCustomerForm.get('nationalId').touched)">
+              Không được để trống & Có 9 số
+            </p>
           </div>
           <div class="mb-2">
             <label>SĐT: </label>
-            <input type="text" class="form-control"  >
+            <input type="text" class="form-control" formControlName="phone" />
           </div>
           <div class="mb-2">
             <label>Email: </label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control"  formControlName="email">
           </div>
           <div class="mb-2">
             <label>Địa chỉ: </label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" formControlName="address">
+          </div>
+
+          <div class="mb-2">
+            <button type="submit" class="btn btn-primary">
+              Create
+            </button>
           </div>
         </div>
       </form>

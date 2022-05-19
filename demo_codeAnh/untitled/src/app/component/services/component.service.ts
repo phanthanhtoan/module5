@@ -29,4 +29,5 @@ export class ComponentService {
     return this.httpClient.delete<void>(this.API_URL + '/' + id);
   }
 
+
 }

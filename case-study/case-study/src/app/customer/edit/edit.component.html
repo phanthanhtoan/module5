@@ -6,6 +6,10 @@
       <div class="form-group mt-2">
         <label for="exampleFormControlInput1">Mã KH</label>
         <input formControlName="id" readonly type="text" class="form-control" id="exampleFormControlInput1">
+        <p class="error" *ngIf="(editForm.get('id').hasError('pattern') && editForm.get('id').dirty)
+                  || (editForm.get('id').hasError('required') && editForm.get('id').touched)">
+          Bắt buộc KH- và số
+        </p>
       </div>
 
       <div class="form-group">

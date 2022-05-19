@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Customer} from "../../model/customer";
 import {CustomerService} from "../../service/customer/customer.service";
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
@@ -40,7 +40,7 @@ export class EditComponent implements OnInit {
       });
     });
     this.editForm = this.fb.group({
-      id: '',
+      id: ['', Validators.required],
       name: '',
       dateOfBirthday:'' ,
       gender: '',

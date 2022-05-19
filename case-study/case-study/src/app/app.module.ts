@@ -7,9 +7,13 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { ListComponent } from './customer/list/list.component';
 import {CreateComponent} from "./customer/create/create.component";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 import { EditComponent } from './customer/edit/edit.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { DeleteComponent } from './customer/delete/delete.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -18,13 +22,18 @@ import {ReactiveFormsModule} from "@angular/forms";
     HeaderComponent,
     CreateComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

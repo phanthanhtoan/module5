@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
 
   registerForm = new FormGroup({
     account: new FormControl(),
-    password: new FormControl(),
+    password: new FormContro  l(),
     confirmPassword: new FormControl(),
     age: new FormControl(),
     gender: new FormControl(),

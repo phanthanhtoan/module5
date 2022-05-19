@@ -1,0 +1,67 @@
+<div class="container-fluid">
+  <div class="row bg-white p-lg-5">
+    <a routerLink="/benhAn" style="color: black" >
+      <button type="button" class="btn btn-success">Danh Sách Bệnh Án</button>
+    </a>
+    <h3 class="text-center">Thêm Bệnh Án: </h3>
+    <form [formGroup]="createBenhAnForm" (ngSubmit)="createBenhAn()">
+      <div>
+        <div class="mb-2">
+          <label>Mã Bệnh Án: <i class="text-danger">*</i> </label>
+          <input type="text" class="form-control" formControlName="id" />
+          <p class="error text-danger"
+             *ngIf="(createBenhAnForm.get('id').hasError('pattern') && createBenhAnForm.get('id').dirty)
+                || createBenhAnForm.get('id').untouched ">
+            Không được để trống, Mã KH bắt đầu bằng BA-***
+          </p>
+        </div>
+
+        <div class="mb-2">
+          <label>Mã Bệnh Nhân: </label>
+          <input type="text" class="form-control" formControlName="idBenhNhan" />
+        </div>
+
+        <div class="mb-2">
+          <label>Tên bệnh nhân: </label>
+          <input type="text" class="form-control" formControlName="tenBenhNhan" />
+        </div>
+
+<!--        <div class="mb-2">-->
+<!--          <label>CCCD: </label>-->
+<!--          <input type="text" class="form-control" formControlName="nationalId" />-->
+<!--          <p class="error text-danger" *ngIf="(createBenhAnForm.get('id').hasError('pattern') && createBenhAnForm.get('nationalId').dirty)-->
+<!--          || (createBenhAnForm.get('nationalId').hasError('required') && createBenhAnForm.get('nationalId').touched)">-->
+<!--            Không được để trống & Có 9 số-->
+<!--          </p>-->
+<!--        </div>-->
+        <div class="mb-2">
+          <label>Ngày nhập viện: </label>
+          <input type="date" class="form-control" formControlName="ngayNhapVien" />
+        </div>
+        <div class="mb-2">
+          <label>Ngày nhập viện: </label>
+          <input type="date" class="form-control"  formControlName="ngayRaVien">
+        </div>
+        <div class="mb-2">
+          <label>Lý do: </label>
+          <input type="text" class="form-control" formControlName="lyDo">
+        </div>
+        <div class="mb-2">
+          <label>Phương pháp: </label>
+          <input type="text" class="form-control" formControlName="phuongPhap">
+        </div>
+        <div class="mb-2">
+          <label>Bác sĩ: </label>
+          <input type="text" class="form-control" formControlName="bacSi">
+        </div>
+
+        <div class="mb-2">
+          <button type="submit" class="btn btn-primary">
+            Create
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

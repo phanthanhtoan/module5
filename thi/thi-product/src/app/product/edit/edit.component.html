@@ -1,0 +1,83 @@
+<div class="row align-items-center mt-3">
+  <div class="col-2"></div>
+  <div class="col-8 card border-danger border-2">
+    <h3 class="text-center">Chỉnh sửa bệnh án: </h3>
+    <form [formGroup]="editForm" (submit)="onSubmit()">
+
+      <div class="form-group mt-2">
+        <label for="exampleFormControlInput1">Mã bệnh án</label>
+        <input formControlName="id"  type="text" class="form-control" id="exampleFormControlInput1" readonly>
+        <!--        <p class="error" *ngIf="(editForm.get('id').hasError('pattern') && editForm.get('id').dirty)-->
+        <!--                  || (editForm.get('id').hasError('required') && editForm.get('id').touched)">-->
+        <!--          Bắt buộc KH- và số-->
+        <!--        </p>-->
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Mã bệnh nhân</label>
+        <input formControlName="idBenhNhan" type="text" class="form-control" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Tên bệnh nhân</label>
+        <input formControlName="tenBenhNhan" type="text" class="form-control">
+        <p class="alert alert-danger"
+             *ngIf="editForm.get('tenBenhNhan')?.invalid && editForm.get('tenBenhNhan')?.touched">
+        Tên bệnh án không được để trống !
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ngày nhập viện</label>
+        <input formControlName="ngayNhapVien" type="date" class="form-control">
+        <p class="alert alert-danger"
+           *ngIf="editForm.get('ngayNhapVien')?.invalid && editForm.get('ngayNhapVien')?.touched">
+         Ngày nhập viện không được để trống !
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ngày ra viện</label>
+        <input formControlName="ngayRaVien" type="date" class="form-control">
+        <p class="alert alert-danger"
+           *ngIf="editForm.get('ngayRaVien')?.invalid && editForm.get('ngayRaVien')?.touched">
+          Ngày ra viện không được để trống !
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Lý do</label>
+        <input formControlName="lyDo" type="text" class="form-control">
+        <p class="alert alert-danger"
+           *ngIf="editForm.get('lyDo')?.invalid && editForm.get('lyDo')?.touched">
+          Lý do nhập viện không được để trống !
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Bác sĩ</label>
+        <input formControlName="bacSi" type="text" class="form-control">
+        <p class="alert alert-danger"
+           *ngIf="editForm.get('bacSi')?.invalid && editForm.get('bacSi')?.touched">
+         Tên bác sĩ không được để trống !
+        </p>
+      </div>
+
+      <div class="text-center m-3">
+<!--        <button class="btn btn-danger mr-5" >-->
+<!--          <a id="huy" routerLink="/benhAn">-->
+<!--            <i class="fa fa-paper-plane"></i>Quay lại</a>-->
+<!--        </button>-->
+        <a routerLink="/benhAn" >
+          <button class="btn btn-success mr-5">
+            Quay lại
+          </button>
+        </a>
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-paper-plane"></i>
+          <span class="ml-1">Cập Nhật</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
